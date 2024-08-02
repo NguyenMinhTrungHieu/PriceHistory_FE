@@ -10,7 +10,7 @@ const SearchProduct = () => {
 
   const handleSearch = async () => {
     try {
-      const response = await axios.get(`http://localhost:3000/v1/products/${asin}`)
+      const response = await axios.get(`https://pricehistory-be.onrender.com/v1/products/${asin}`)
       // setError(null);
       navigate(`/products/${asin}`, { state: { product: response.data } })
     } catch (err) {
